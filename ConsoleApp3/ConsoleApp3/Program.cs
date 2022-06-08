@@ -41,24 +41,37 @@ namespace ConsoleApp3
                         Console.WriteLine("Values from database ");
                         foreach (var item in data)
                         {
-                            Console.WriteLine(item.Id + " | " + item.Fname);
+                            Console.WriteLine(item.Id + " | " + item.Fname + " | " + item.Lname + " | " + item.Salary);
+                            
                         }
                         break;
 
                     case 3:
                         var data1 = db.EmployeeDetails;
-                        Console.WriteLine("Pleae enter id of your name which you want to update");
+                        Console.WriteLine("Pleae enter id which you want to update");
                         int InsertItem = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Please enter the new name");
-                        var newName = Console.ReadLine();
-                        var UpdatteObject = db.EmployeeDetails.Where(x => x.Id == InsertItem).FirstOrDefault();
-                        UpdatteObject.Fname = newName;
-                        db.EmployeeDetails.Update(UpdatteObject);
+                        Console.WriteLine("Please enter the new fname");
+                        var newFname = Console.ReadLine();
+                        var UpdateObject = db.EmployeeDetails.Where(x => x.Id == InsertItem).FirstOrDefault();
+                        UpdateObject.Fname = newFname;
+                        db.EmployeeDetails.Update(UpdateObject);
+
+                        Console.WriteLine("Please enter the new lname");
+                        var newLname = Console.ReadLine();
+                        var UpdateObject1 = db.EmployeeDetails.Where(y => y.Id == InsertItem).FirstOrDefault();
+                        UpdateObject1.Fname = newLname;
+                        db.EmployeeDetails.Update(UpdateObject1);
+
+                        Console.WriteLine("Please enter the Updated Salary");
+                        var newSalary = Console.ReadLine();
+                        var UpdateObject2 = db.EmployeeDetails.Where(z => z.Id == InsertItem).FirstOrDefault();
+                        UpdateObject2.Fname = newSalary;
+                        db.EmployeeDetails.Update(UpdateObject2);
                         db.SaveChanges();
 
                         foreach (var item in data1)
                         {
-                            Console.WriteLine(item.Id + " | " + item.Fname);
+                            Console.WriteLine(item.Id + " | " + item.Fname + " | " + item.Lname + " | " + item.Salary);
                         }
                         break;
 
