@@ -61,3 +61,9 @@ C:\Users\HP\Desktop\Dont net training\WebApplication3\WebApplication3\obj\Debug\
 C:\Users\HP\Desktop\Dont net training\WebApplication3\WebApplication3\obj\Debug\netcoreapp3.1\WebApplication3.dll
 C:\Users\HP\Desktop\Dont net training\WebApplication3\WebApplication3\obj\Debug\netcoreapp3.1\WebApplication3.pdb
 C:\Users\HP\Desktop\Dont net training\WebApplication3\WebApplication3\obj\Debug\netcoreapp3.1\WebApplication3.genruntimeconfig.cache
+C:\Users\HP\Desktop\Dont net training\WebApplication3\WebApplication3\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\HP\Desktop\Dont net training\WebApplication3\WebApplication3\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\HP\Desktop\Dont net training\WebApplication3\WebApplication3\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\HP\Desktop\Dont net training\WebApplication3\WebApplication3\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\HP\Desktop\Dont net training\WebApplication3\WebApplication3\obj\Debug\netcoreapp3.1\WebApplication3.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\HP\Desktop\Dont net training\WebApplication3\WebApplication3\obj\Debug\netcoreapp3.1\WebApplication3.csproj.AssemblyReference.cache
