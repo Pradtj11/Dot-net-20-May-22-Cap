@@ -1,0 +1,39 @@
+<table style="border-bottom: 2px;">
+    <tr>
+        <td><img src="../../assets/Top-Offers.PNG" height="90px" width="70px" style="margin: 0px 40px 0px 15px;"></td>
+        <td><img src="../../assets/Grocery.PNG" height="90px" width="70px" style="margin: 0px 40px 0px 40px;"></td>
+        <td><img src="../../assets/Mobils.PNG" height="90px" width="70px" style="margin: 0px 40px 0px 40px;"></td>
+        <td><img src="../../assets/Fasion.PNG" height="90px" width="70px" style="margin: 0px 40px 0px 40px;"></td>
+        <td><img src="../../assets/Electronics.PNG" height="90px" width="70px" style="margin: 0px 40px 0px 40px;"></td>
+        <td><img src="../../assets/Home1.PNG" height="90px" width="70px" style="margin: 0px 40px 0px 40px;"></td>
+        <td><img src="../../assets/Appliances.PNG" height="90px" width="70px" style="margin: 0px 40px 0px 40px;"></td>
+        <td><img src="../../assets/Travel.PNG" height="90px" width="70px" style="margin: 0px 40px 0px 40px;"></td>
+        <td><img src="../../assets/Toys.PNG" height="90px" width="70px" style="margin: 0px 20px 0px 40px;"></td>
+    </tr>
+    <tr>
+        <td style="text-align:center;">Top Offers</td>
+        <td style="text-align:center;">Grocery</td>
+        <td style="text-align:center;">Mobiles</td>
+        <td style="text-align:center;">Fashion</td>
+        <td style="text-align:center;">Electronics</td>
+        <td style="text-align:center;">Home</td>
+        <td style="text-align:center;">Appliances</td>
+        <td style="text-align:center;">Travel</td>
+        <td style="text-align:center;">Toys,Beauty and More</td>
+    </tr>
+ </table>
+
+
+
+<div class="row mt-5">
+    <div class="col-md-4 mb-3" *ngFor="let product of products">
+        <div class="card" style="width: 22rem; height:24rem">
+            <img class="card-img-top" src="../../assets/{{product.productImage}}" style="height: 12rem;" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{product.productName}}</h5>
+                <p class="card-text">{{product.productDescription}}</p>
+                <a href="account" class="btn btn-primary">Buy</a>
+            </div>
+        </div>
+    </div>
+</div>

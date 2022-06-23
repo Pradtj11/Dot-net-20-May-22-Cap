@@ -11,4 +11,3 @@ export class Customer{
     CustomerCode:string='';
     CustomerAmount:number=0;
 }
-
