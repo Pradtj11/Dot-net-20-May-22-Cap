@@ -1,4 +1,8 @@
 export class UserData{
-    userName:string='';
-    password:string='';
+    UserId:number=0;
+    UserName:any;
+    UserLastName:any;
+    Gender:any;
+    EmailId:any='';
+    password:any='';
 }

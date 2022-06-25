@@ -1,12 +1,8 @@
 ﻿using EcommerceWebApi.Interfaces;
 using EcommerceWebApi.Models;
 using EcommerceWebApi.ViewModels;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace EcommerceWebApi.Controllers
 {
@@ -20,6 +16,13 @@ namespace EcommerceWebApi.Controllers
         {
             db = _db;
             iJWTMangerRepository = _iJWTMangerRepository;
+        }
+
+        [HttpGet]
+        [Route("User")]
+        public IEnumerable<TblLogin> Get()
+        {
+            return db.TblLogins;
         }
 
         [HttpPost]
@@ -39,7 +42,10 @@ namespace EcommerceWebApi.Controllers
         {
             LoginViewModel login = new LoginViewModel();
             login.UserName = registerViewModel.UserName;
+            login.UserLastName = registerViewModel.UserLastName;
+            login.EmailId = registerViewModel.EmailId;
             login.Password = registerViewModel.Password;
+            login.Gender = registerViewModel.Gender;
             var token = iJWTMangerRepository.Authenicate(login, true);
             if (token == null)
             {

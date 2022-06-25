@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ProductService } from '../services/product.service';
+import { CartService } from '../services/cart.service';
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _productservice: ProductService,private cartService : CartService) { }
 
-  ngOnInit(): void {
+  public products : any ; 
+   ngOnInit(): void {
+
+    this._productservice.getProducts().subscribe(res => this.products = res, err => console.log(err))
+  }
+  
+  addtocart(product: any){
+   this.cartService.addtoCart(product);
   }
 
 }

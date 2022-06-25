@@ -41,11 +41,20 @@ namespace EcommerceWebApi.Models
 
             modelBuilder.Entity<TblLogin>(entity =>
             {
+                entity.HasKey(e => e.UserId)
+                    .HasName("PK__TblLogin__1788CCACBCFFAADD");
+
                 entity.ToTable("TblLogin");
 
-                entity.Property(e => e.Id).HasColumnName("ID");
+                entity.Property(e => e.UserId).HasColumnName("UserID");
+
+                entity.Property(e => e.EmailId).HasMaxLength(100);
+
+                entity.Property(e => e.Gender).HasMaxLength(100);
 
                 entity.Property(e => e.Password).HasMaxLength(100);
+
+                entity.Property(e => e.UserLastName).HasMaxLength(100);
 
                 entity.Property(e => e.UserName).HasMaxLength(100);
             });

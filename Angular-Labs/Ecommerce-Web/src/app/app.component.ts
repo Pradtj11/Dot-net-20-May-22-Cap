@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './services/auth.service';
+import { CartService } from './services/cart.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,16 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'ecommerce-web';
+  public totalItem : number = 0;
+  constructor(private _auth:AuthService,private cartservice:CartService){ }
 
-  constructor(private _auth:AuthService){
-
+  ngOnInit(): void {
+    this.cartservice.getProducts()
+    .subscribe((res: string | any[])=>{
+      this.totalItem = res.length;
+    })
   }
+  
   LoggedIn(input:boolean){
     if(input){
       return this._auth.loggedIn();

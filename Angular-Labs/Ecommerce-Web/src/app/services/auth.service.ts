@@ -1,11 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { UserData } from '../models/UserData';
 
 @Injectable()
 export class AuthService {
   private _registerUrl = "https://localhost:44338/api/Login/register";
   private _loginUrl = "https://localhost:44338/api/Login/login";
+  private _UserUrl = "https://localhost:44338/api/Login/User"
 
   constructor(private http: HttpClient,private _router:Router) { }
 
@@ -23,5 +25,14 @@ export class AuthService {
     localStorage.removeItem('token');
     this._router.navigate(['/home']);
   }
+  getUser() {
+    return this.http.get<any>("https://localhost:44338/api/Login/User");
+  }
 
 }
+
+
+function user<T>(_UserUrl: string, user: any) {
+  throw new Error('Function not implemented.');
+}
+
