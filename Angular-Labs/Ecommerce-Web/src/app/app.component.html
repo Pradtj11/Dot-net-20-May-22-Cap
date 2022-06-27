@@ -24,15 +24,21 @@
         <li class="nav-item">
           <a class="nav-link"  *ngIf="LoggedIn(true)"routerLink="/dashboard" >Dashboard</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link"  *ngIf="LoggedIn(true)"routerLink="/Orders" >Orders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  *ngIf="LoggedIn(true)"routerLink="/finalorder" >FinalOrder</a>
+        </li>
       </ul>
     </div>
   </div>
   <div class="from-group">
-    <input type="text" class="form-control" placeholder="search products" style="border-radius: 3px; width:600px; margin-right: 350px;">
+    <input type="text" class="form-control" placeholder="search products" style="border-radius: 3px; width:600px; margin-right: 200px;">
   </div>
-  <span class="fas fa-search search-icon" style="position: absolute; z-index: 10; left:72%; top:32px; color:blue"></span>
+  <span class="fas fa-search search-icon" style="position: absolute; z-index: 10; left:82%; top:32px; color:blue"></span>
   <div>
-  <button class="btn btn-primary" routerLink="/cart">
+  <button routerLink="cart" class="btn btn-primary" routerLink="/cart">
     <i style="font-size: 20px;" class="fas fa-cart-plus"></i>
     <div style="font-size: 8px;" class="badge bg-danger">{{totalItem}}</div>
 </button>

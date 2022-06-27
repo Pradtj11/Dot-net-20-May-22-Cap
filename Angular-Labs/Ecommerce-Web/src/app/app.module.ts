@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { AuthService } from './services/auth.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CartComponent } from './cart/cart.component';
+import { OrdersComponent } from './orders/orders.component';
+import { FinalorderComponent } from './finalorder/finalorder.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,10 @@ import { CartComponent } from './cart/cart.component';
     AccountComponent,
     HomeComponent,
     DashboardComponent,
-    CartComponent
+    CartComponent,
+    OrdersComponent,
+    FinalorderComponent,
+    FinalorderComponent
   ],
   imports: [
     BrowserModule,

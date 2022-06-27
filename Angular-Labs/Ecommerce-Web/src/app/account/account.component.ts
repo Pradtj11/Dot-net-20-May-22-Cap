@@ -14,6 +14,10 @@ export class AccountComponent implements OnInit {
    ngOnInit(): void {
 
     this._productservice.getProducts().subscribe(res => this.products = res, err => console.log(err))
+    this.products.forEach((a:any) => {
+      Object.assign(a,{quantity:1, total:a.productMrp});
+      
+    });
   }
   
   addtocart(product: any){

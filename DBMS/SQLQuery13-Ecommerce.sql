@@ -1,5 +1,8 @@
 use EcommerceDB;
 
+create table TblLogin(UserID int identity(1,1), UserName nvarchar(100), UserLastName nvarchar(100), Password nvarchar(100), EmailId nvarchar(100), Gender nvarchar(100), IsAdmin int, primary key(UserId));
+
+
 create table TblLogin(ID int identity(1,1), UserName nvarchar(100), Password nvarchar(100), IsAdmin int, primary key(ID));
 
 create table TblProduct(Id int identity(1,1), ProductName nvarchar(100), ProductDescription nvarchar(100), CatID int, ProductImage nvarchar(100), ProductMrp decimal(18,2), ProductDiscount decimal(18,2), ProductFinal decimal(18,2), ProductQuantity int, primary key(ID));
@@ -13,6 +16,7 @@ insert into tblProduct values('Watch','VPrime Screen Guard for CROX Noise Colour
 delete from tblProduct;
 select * from tblProduct;
 select * from TblLogin;
+delete from TblLogin;
 
 
 

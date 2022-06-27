@@ -1,9 +1,9 @@
 export class Product{
     id:number=0;
-    productName:string='';
-    productDescription:string=''
+    productName:any='';
+    productDescription:any=''
     catID:number=0;
-    productImage:string='';
+    productImage:any='';
     productMrp:number=0;
     productDiscount:number=0;
     productFinal:number=0;

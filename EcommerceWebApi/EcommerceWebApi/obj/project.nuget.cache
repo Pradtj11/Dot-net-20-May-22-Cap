@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yTqmsEOo5t7Mshlzc/VByKxcO3h4FzOeFZwp2xb/NVbrujC9SS+d1nkZGRvjAFLb3tBq0+nkfqwiThSFtLZa/w==",
+  "dgSpecHash": "jZ01iAu091VBv5abdbzf+o56l0WsG+zQDKc19WROpCzbcwwahwgJfc/rXvL4j+S0PYxuAeUmcBe3tq0aU+FYAQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\Dont net training\\EcommerceWebAPI\\EcommerceWebApi\\EcommerceWebApi.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\Dont net training\\EcommerceWebApi\\EcommerceWebApi\\EcommerceWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.24\\microsoft.aspnetcore.authentication.jwtbearer.3.1.24.nupkg.sha512",
