@@ -25,6 +25,7 @@ namespace EcommerceWebApi.Controllers
             return db.TblLogins;
         }
 
+
         [HttpPost]
         [Route("login")]
         public IActionResult Login(LoginViewModel loginViewModel)

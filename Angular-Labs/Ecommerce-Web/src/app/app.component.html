@@ -15,20 +15,16 @@
         <li class="nav-item">
           <a class="nav-link"  *ngIf="LoggedIn(false)" routerLink="/register">Register</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link"  *ngIf="LoggedIn(true)" routerLink="/account">My Account</a>
-        </li>
-        <li class="nav-item">
+         <li class="nav-item">
           <a class="nav-link"  *ngIf="LoggedIn(true)" (click)="LogOut()">Logout</a>
         </li>
+        
         <li class="nav-item">
-          <a class="nav-link"  *ngIf="LoggedIn(true)"routerLink="/dashboard" >Dashboard</a>
+          <a class="nav-link"  *ngIf="LoggedIn(true)"routerLink="/dashboard" style="color: black;" >Dashboard</a>
         </li>
+        
         <li class="nav-item">
-          <a class="nav-link"  *ngIf="LoggedIn(true)"routerLink="/Orders" >Orders</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  *ngIf="LoggedIn(true)"routerLink="/finalorder" >FinalOrder</a>
+          <a class="nav-link"  *ngIf="LoggedIn(true)"routerLink="/cart" ></a>
         </li>
       </ul>
     </div>

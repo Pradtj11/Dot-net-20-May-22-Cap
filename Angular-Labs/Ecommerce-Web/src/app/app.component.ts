@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, InputDecorator } from '@angular/core';
 import { AuthService } from './services/auth.service';
 import { CartService } from './services/cart.service';
 
@@ -30,4 +30,9 @@ export class AppComponent {
   LogOut(){
     this._auth.logoutUser();
   }
+}
+
+
+function IsAdmin(Input: InputDecorator, boolean: any) {
+  throw new Error('Function not implemented.');
 }

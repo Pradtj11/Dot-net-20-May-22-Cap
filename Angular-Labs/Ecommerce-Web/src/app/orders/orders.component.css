@@ -1,16 +1,11 @@
-.form
-{
-    margin-top: 20px;
-   
-}
-.form table 
-{
-    padding: 20px;
-}
-.main
-{
-   align-content: center;
-   margin-top: 18%;
-   margin-left: 25%;
-   
-}
+.title-style{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: hsl(52, 0%, 98%);
+    }
+    .title-quote{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: hsl(52, 0%, 98%);
+    }

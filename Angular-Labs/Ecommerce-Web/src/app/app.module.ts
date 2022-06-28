@@ -13,6 +13,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CartComponent } from './cart/cart.component';
 import { OrdersComponent } from './orders/orders.component';
 import { FinalorderComponent } from './finalorder/finalorder.component';
+import { AdminComponent } from './admin/admin.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { FinalorderComponent } from './finalorder/finalorder.component';
     CartComponent,
     OrdersComponent,
     FinalorderComponent,
-    FinalorderComponent
+    FinalorderComponent,
+    AdminComponent,
+    
   ],
   imports: [
     BrowserModule,

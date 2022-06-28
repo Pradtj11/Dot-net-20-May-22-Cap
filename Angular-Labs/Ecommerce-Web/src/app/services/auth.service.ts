@@ -12,7 +12,7 @@ export class AuthService {
   private _registerUrl = "https://localhost:44338/api/Login/register";
   private _loginUrl = "https://localhost:44338/api/Login/login";
   private _UserUrl = "https://localhost:44338/api/Login/User"
-  getuser: any;
+ 
 
   constructor(private http: HttpClient, private _router:Router) { }
 
@@ -31,14 +31,12 @@ export class AuthService {
     this._router.navigate(['/home']);
   }
   getUser() {
-    return this.http.get<any>("https://localhost:44338/api/Login/User")
+    return this.http.get<any>(this._UserUrl)
     
   }
 
 }
 
 
-function user<T>(_UserUrl: string, user: any): void {
-  throw new Error('Function not implemented.');
-}
+
 

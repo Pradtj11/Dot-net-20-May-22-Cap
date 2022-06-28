@@ -6,7 +6,7 @@
                 <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{product.productName}}</h5>
                 <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{product.productDescription}}</p>
                 <p><strong>Price:</strong> ${{product.productFinal}}</p>
-                <button class="btn btn-primary" (click)=addtocart(product)>Add to cart</button>
+                <button routerLink="/cart" class="btn btn-primary" (click)=addtocart(product)>Add to cart</button>
                 
             </div>
         </ng-container>

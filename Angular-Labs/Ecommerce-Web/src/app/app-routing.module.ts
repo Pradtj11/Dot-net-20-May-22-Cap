@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { OrdersComponent } from './orders/orders.component';
 import { FinalorderComponent } from './finalorder/finalorder.component';
 import { RegisterComponent } from './register/register.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   {
@@ -46,8 +47,11 @@ const routes: Routes = [
   {
     path: 'finalorder',
     component: FinalorderComponent
-  }
-  
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
+  } 
   
 ];
 

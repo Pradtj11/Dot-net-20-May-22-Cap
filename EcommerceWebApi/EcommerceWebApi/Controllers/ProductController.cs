@@ -22,5 +22,23 @@ namespace EcommerceWebApi.Controllers
         {
             return db.TblProducts;
         }
+
+        [HttpPost]
+        public string Post([FromBody] TblProduct user)
+        {
+            TblProduct product = new TblProduct();
+            product.Id = user.Id;
+            product.ProductName = user.ProductName;
+            product.ProductDescription = user.ProductDescription;
+            product.CatId = user.CatId;
+            product.ProductMrp = user.ProductMrp;
+            product.ProductDiscount = user.ProductDiscount;
+            product.ProductFinal = user.ProductFinal;
+            product.ProductQuantity = user.ProductQuantity;
+            db.TblProducts.Add(user);
+            db.SaveChanges();
+            return "success";
+        }
     }
-}
+ }
+    

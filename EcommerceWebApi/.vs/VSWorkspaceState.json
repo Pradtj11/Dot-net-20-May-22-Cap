@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\EcommerceWebApi",
+    "\\EcommerceWebApi\\Controllers",
+    "\\EcommerceWebApi\\Interfaces"
   ],
-  "SelectedNode": "\\EcommerceWebApi",
+  "SelectedNode": "\\EcommerceWebApi.sln",
   "PreviewInSolutionExplorer": false
 }
