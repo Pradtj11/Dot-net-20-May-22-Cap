@@ -26,6 +26,6 @@ export class AppComponent {
     let filetoUpload=<File>files[0];
     const formData=new FormData();
     formData.append('file',filetoUpload,filetoUpload.name)
-    this.http.post("https://localhost:44362/api/upload",formData).subscribe(res=>console.log(res),res=>console.log(res));
+    this.http.post("https://localhost:44362/api/upload", formData).subscribe(res=>console.log(res),res=>console.log(res));
   }
 }
