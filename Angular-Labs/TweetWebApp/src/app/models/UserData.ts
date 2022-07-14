@@ -3,8 +3,8 @@ export class UserData{
     firstName:any;
     lastName:any;
     email:any;
-    loginId:any='';
-    password:any='';
-    confirmPassword:any='';
+    loginId:any;
+    password:any;
+    confirmPassword:any;
     contactNumber:number=0;
 }

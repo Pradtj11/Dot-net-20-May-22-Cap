@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,8 @@ using TweetWebApi.ViewModels;
 
 namespace TweetWebApi.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class LoginController : Controller
     {
         TweetDBContext db;
@@ -27,7 +30,7 @@ namespace TweetWebApi.Controllers
         }
 
 
-        [HttpGet]
+        [HttpPost]
         [Route("login")]
         public IActionResult Login(LoginViewModel loginViewModel)
         {
@@ -38,6 +41,7 @@ namespace TweetWebApi.Controllers
             }
             return Ok(token);
         }
+
         [HttpPost]
         [Route("register")]
         public IActionResult Register(RegisterViewModel registerViewModel)
