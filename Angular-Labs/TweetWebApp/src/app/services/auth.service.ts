@@ -11,7 +11,7 @@ export class AuthService {
   }
   private _registerUrl = "https://localhost:44343/api/Login/register";
   private _loginUrl = "https://localhost:44343/api/Login/login";
-  private _UserUrl = "https://localhost:44343/api/Login/User"
+  private _UserUrl = "https://localhost:44343/api/Login/User";
  
 
   constructor(private http: HttpClient, private _router:Router) { }
@@ -28,7 +28,7 @@ export class AuthService {
   }
   logoutUser(){
     localStorage.removeItem('token');
-    this._router.navigate(['/home']);
+    this._router.navigate(['/login']);
   }
   getUser() {
     return this.http.get<any>(this._UserUrl)

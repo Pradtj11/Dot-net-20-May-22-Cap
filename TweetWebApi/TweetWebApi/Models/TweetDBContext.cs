@@ -21,7 +21,12 @@ namespace TweetWebApi.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            
+            if (!optionsBuilder.IsConfigured)
+            {
+
+                optionsBuilder.UseSqlServer("Data Source=LAPTOP-IBOPJQ1B;Initial Catalog=TweetDB;Integrated Security=True");
+            }
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
