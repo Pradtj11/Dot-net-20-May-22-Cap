@@ -11,6 +11,8 @@
 .layout__right-sidebar
 {
     position: fixed;
+    width: 350px;
+    margin-left: 20px;
 }
 .brand
 {
@@ -31,6 +33,10 @@
     font-weight: 700;
     padding: 10px;
     margin-left: 60px;
+}
+.sidebar-menu__item a{
+    text-decoration: none;
+    color: #0F141A;
 }
 .sidebar-menu__item:hover{
     background: rgba(29, 161, 242, 0.1);
@@ -117,7 +123,37 @@
 
 .form-group
 {
-   border-radius: 4px;  
+   border: 2px solid black;
+   border-radius: 8px;  
    margin: 20px;
-   padding: 16px 16px;
+   padding: 0px;
+   font-size: 16px;
+   font-family: var(--font1);
+}
+
+.trends-for-you{
+    border-radius: 15px;
+    background: #f5f8fa;
+
+}
+.trends-for-you__block{
+    border-bottom: 1px solid #e6ecf0;
+    padding: 10px 15px;
+}
+.trends-for-you__heading{
+    font-size: 19px;
+    font-weight: bold;
+    color: #14171a;
+}
+.trends-for-you__meta-information{
+    font-size: 13px;
+    font-weight: 300;
+    color: #657786;
+}
+.trends-for-you__trend-name{
+    font-size: 15px;
+    color: #14171a;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 5px;
 }
