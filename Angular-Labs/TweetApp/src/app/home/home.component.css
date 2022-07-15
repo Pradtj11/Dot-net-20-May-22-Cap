@@ -157,3 +157,11 @@
     margin-top: 2px;
     margin-bottom: 5px;
 }
+.tbody{
+    display: flex;
+}
+.tbody img{
+    height: 26px;
+    width: 26px;
+    margin-right: 20px;
+}

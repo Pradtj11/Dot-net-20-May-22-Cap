@@ -44,6 +44,19 @@
           <div class="tweet__btn">
             <button routerLink="/tweet" class="btn btn-lg btn-primary" type="submit">Tweet</button> 
           </div>
+          <br />
+          <br />
+          <br />
+          <div class="footer">
+            <tbody>
+              <img src="./assets/profile.svg">
+              <tr *ngFor="let user of users;">
+                  <td>{{user.firstName}}</td>
+                  <td>{{user.lastName}}</td>
+                  <td>{{user.email}}</td>
+               </tr>
+          </tbody>
+          </div>
         </div>
 			</div>
 			<div class="layout__main">
@@ -158,7 +171,7 @@
         
         <div class="layout__right-sidebar">
           <div class="form-group">
-            <input type="text" placeholder="search users by there User">
+            <input type="text" placeholder="search users by there Name">
           </div>
           <span class="fas fa-search search-icon" style="position: absolute; z-index: 15; left:85%; top:30px; color:blue"></span>
           <div class="trends-for-you">
