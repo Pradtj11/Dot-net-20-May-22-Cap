@@ -9,6 +9,9 @@ import { AuthService } from '../services/auth.service';
 })
 export class HomeComponent implements OnInit {
 
+  public searchTerm: string='';
+    
+  AuthService: any;
   constructor(private auth: AuthService) { }
 
   users: Array<UserData> = new Array<UserData>();
@@ -16,5 +19,9 @@ export class HomeComponent implements OnInit {
 
     this.auth.getUser().subscribe((res: UserData[]) => this.users = res, (err: any) => console.log(err))
   }
-
+  search(event:any){
+    this.searchTerm=(event.target as HTMLInputElement).value;
+    console.log(this.searchTerm);
+    this.AuthService.search.next(this.searchTerm);
+  }
 }

@@ -1,8 +1,9 @@
 <legend style="color:red;">User Details</legend>
+<div class="container">
 <table class="table mt-3">
     <thead>
         <tr>
-            <th scope="col">UserId</th>
+            
             <th scope="col">First Name</th>
             <th scope="col">Last Name</th>
             <th scope="col">E-Mail</th>
@@ -13,7 +14,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let user of users; let i=index">
-            <td>{{i+1}}</td>
+            
             <td>{{user.firstName}}</td>
             <td>{{user.lastName}}</td>
             <td>{{user.email}}</td>
@@ -22,10 +23,4 @@
         </tr>
     </tbody>
 </table>
-<br />
-<br />
-<br />
-<br />
-<br />
-
-
+</div>

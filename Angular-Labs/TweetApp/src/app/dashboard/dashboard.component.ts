@@ -18,4 +18,7 @@ export class DashboardComponent implements OnInit {
     this._auth.getUser().subscribe(res => this.users = res, err => console.log(err))
   }
 
+  addtoaccount(item:any){
+  }
+
 }
