@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserData } from '../models/UserData';
 import { AuthService } from '../services/auth.service';
+import { Subscription } from 'rxjs';
+import { AccountService } from '../services/account.service';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +10,25 @@ import { AuthService } from '../services/auth.service';
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent implements OnInit {
+  
+  clickEventSubscription:Subscription | undefined;
+  
 
-  constructor(private auth: AuthService) { }
+  constructor(private auth: AuthService, private accountService:AccountService) { 
+    this.clickEventSubscription= this.accountService.getClickEvent().subscribe(()=>{
+        this.incrementCount();
+    })
+  }
 
   users: Array<UserData> = new Array<UserData>();
   ngOnInit(): void {
 
     this.auth.getUser().subscribe((res: UserData[]) => this.users = res, (err: any) => console.log(err))
   }
+  count:number=0;
+  incrementCount(){
+    this.count++;
+  }
+  
 
 }

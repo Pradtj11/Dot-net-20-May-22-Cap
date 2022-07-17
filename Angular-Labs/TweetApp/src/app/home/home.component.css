@@ -165,3 +165,7 @@
     width: 26px;
     margin-right: 20px;
 }
+.tweet__header button{
+    width: 20px;
+    height: 20px;
+}

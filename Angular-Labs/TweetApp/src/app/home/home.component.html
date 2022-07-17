@@ -164,6 +164,9 @@
               Birthday wishes to Mizoram CM Shri Zoramthanga Ji.<br /> I pray for his long and healthy life. 
                @ZoramthangaCM
             </div>
+            <div>
+              <button (click)="clickMe()" class="btn btn-lg btn-primary" type="button">Like</button>
+            </div>
           </div>
         </div>
 			</div>
@@ -171,7 +174,7 @@
         
         <div class="layout__right-sidebar">
           <div class="form-group">
-            <input type="text" placeholder="search users by there Name">
+            <input type="text" [(ngModel)]="searchTerm" (keyup)="search($event)" placeholder="search users by there Name">
           </div>
           <span class="fas fa-search search-icon" style="position: absolute; z-index: 15; left:85%; top:30px; color:blue"></span>
           <div class="trends-for-you">
