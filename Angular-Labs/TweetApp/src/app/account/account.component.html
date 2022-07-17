@@ -80,7 +80,7 @@
           <ul>
             <li routerLink="/tweet">Tweet</li>
             <li>Following</li>
-            <i class="badge bg-danger">{{count}}</i>
+            <i class="badge bg-danger">{{quantity}}</i>
             <li>Likes</li>
           </ul>
         </div>
@@ -96,7 +96,7 @@
           @DDNewsHindi
           . Follow us on- http://instagram.com/ddnews_official</p></div>
         
-        <div class="follow"><button routerLink="/account" class="btn btn-lg btn-primary" type="submit">Follow</button></div>
+        <div class="follow"><button button (click)="plus()" class="btn btn-lg btn-primary" type="button">Follow</button></div>
       </div>
       <div who-to-follow>
         <img class="author-logo" src="./assets/president.jpg" />
@@ -104,21 +104,21 @@
         <div class="author_name" >President of India</div>
         <div class="author_slug">@rashtrapatibhvn</div>
         <div class="discri"><p>This is the official Twitter account of Rashtrapati Bhavan and is run by the President’s Secretariat. Tweets from the President are signed #PresidentKovind</p></div>
-        <div class="follow"><button routerLink="/account" class="btn btn-lg btn-primary" type="submit">Follow</button></div>
+        <div class="follow"><button (click)="plus()" class="btn btn-lg btn-primary" type="button">Follow</button></div>
       </div>
       <div who-to-follow>
         <img class="author-logo" src="./assets/yogi.jpg" />
         <div class="discri"><p>मुख्यमंत्री (उत्तर प्रदेश); गोरक्षपीठाधीश्वर, श्री गोरक्षपीठ; सदस्य, विधान सभा, उत्तर प्रदेश; पूर्व सांसद (लोकसभा-लगातार 5 बार) गोरखपुर, उत्तर प्रदेश</p></div>
         <div class="author_name" >Yogi Adityanath</div>
         <div class="author_slug">@yogiadityanath</div>
-        <div class="follow"><button routerLink="/account" class="btn btn-lg btn-primary" type="submit">Follow</button></div>
+        <div class="follow"><button (click)="plus()" class="btn btn-lg btn-primary" type="button">Follow</button></div>
       </div>
       <div who-to-follow>
         <img class="author-logo" src="./assets/president.jpg" />
         <div class="discri"><p>This is the official Twitter account of Rashtrapati Bhavan and is run by the President’s Secretariat. Tweets from the President are signed #PresidentKovind</p></div>
         <div class="author_name" >President of India</div>
         <div class="author_slug">@rashtrapatibhvn</div>
-        <div class="follow"><button routerLink="/account" class="btn btn-lg btn-primary" type="submit">Follow</button></div>
+        <div class="follow"><button (click)="plus()" class="btn btn-lg btn-primary" type="button">Follow</button></div>
       </div>
     </div>
   </div>
