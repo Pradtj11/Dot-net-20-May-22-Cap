@@ -18,15 +18,14 @@ namespace TweetWebApi.Models
         }
 
         public virtual DbSet<TblLogin> TblLogins { get; set; }
+        public virtual DbSet<TblTweet> TblTweets { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-
                 optionsBuilder.UseSqlServer("Data Source=LAPTOP-IBOPJQ1B;Initial Catalog=TweetDB;Integrated Security=True");
             }
-
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -50,6 +49,23 @@ namespace TweetWebApi.Models
                 entity.Property(e => e.LoginId).HasMaxLength(100);
 
                 entity.Property(e => e.Password).HasMaxLength(100);
+            });
+
+            modelBuilder.Entity<TblTweet>(entity =>
+            {
+                entity.ToTable("TblTweet");
+
+                entity.Property(e => e.AuthorLogo).HasMaxLength(100);
+
+                entity.Property(e => e.AuthorName).HasMaxLength(100);
+
+                entity.Property(e => e.AuthorSlug).HasMaxLength(100);
+
+                entity.Property(e => e.TweetDescription).HasMaxLength(1000);
+
+                entity.Property(e => e.TweetImage).HasMaxLength(100);
+
+                entity.Property(e => e.TweetTime).HasMaxLength(100);
             });
 
             OnModelCreatingPartial(modelBuilder);

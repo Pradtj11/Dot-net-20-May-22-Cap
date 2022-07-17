@@ -30,13 +30,20 @@ export class AccountComponent implements OnInit {
     this.count++;
   }
   quantity:number=0;
-  i=0;
+  i=1;
   plus(){
     if(this.i !=50){
       this.i++;
       this.quantity=this.i;
     }
   }
+    minus(){
+      if(this.i !=1){
+        this.i--;
+        this.quantity=this.i;
+      }
+    }
+  }
   
 
-}
+
