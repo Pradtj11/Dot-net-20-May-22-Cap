@@ -1,3 +1,18 @@
+<head>
+    <script>
+        function verifyPassword(){
+            var pw=document.getElementById("pswd").value;
+            //check empty pssword field
+            if(floatingPassword==""){
+                document.getElementById("message").innerHTML= "**Fill the password please!";
+                return false;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
 <div class="py-5">
     <div class="row">
         <div class="col-md-6 mx-auto">
@@ -9,11 +24,11 @@
                     <div class="form">
                         <div class="col-md-12">
                             <label class="form-label" for="floatingInput">Email Id</label>
-                            <input type="email" class="form-control"   [(ngModel)]="loginUserData.email" id="floatingInput" placeholder="Please enter your email">
+                            <input type="email" class="form-control"  [(ngModel)]="loginUserData.email" id="floatingInput" placeholder="abc@gmail.com">
                         </div>
                         <div class="col-md-12">
                             <label class="form-label" for="floatingPassword">Password</label>
-                            <input type="password" class="form-control" [(ngModel)]="loginUserData.password" id="floatingPassword" placeholder="Password">
+                            <input type="password" class="form-control" id="pswd" [(ngModel)]="loginUserData.password" placeholder="123@Pt">
                         </div>
                         <div class="col-12">
                             <div class="form-check"></div>
@@ -26,3 +41,4 @@
         </div>
     </div>
 </div>
+</body>

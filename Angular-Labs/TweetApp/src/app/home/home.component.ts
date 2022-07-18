@@ -32,4 +32,12 @@ export class HomeComponent implements OnInit {
   clickMe(){
     this.accountService.sendClickEvent();
   }
+  quantity:number=0;
+  i=0;
+  plus(){
+    if(this.i !=50){
+      this.i++;
+      this.quantity=this.i;
+    }
+  }
 }

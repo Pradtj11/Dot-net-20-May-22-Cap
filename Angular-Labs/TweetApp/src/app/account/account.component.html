@@ -1,134 +1,161 @@
 <html>
-	<head>
-		<title>Tweet App</title>
-		<link rel="stylesheet" type="text/css" href="account.component.css">
-	</head>
-	<body>
-		<div class="layout">
-			<div class="layout__left-sidebar">
-        
-        <div class="sidebar-menu">
-          <img src="./assets/twitter.svg" class="brand">
-          <div class="sidebar-menu__item--active">
-            <img src="./assets/home.svg" class="sidebar-menu__item-icon" />
-            Home
-          </div>
-          <div class="sidebar-menu__item">
+
+<head>
+  <title>Tweet App</title>
+  <link rel="stylesheet" type="text/css" href="account.component.css">
+</head>
+
+<body>
+  <div class="layout">
+    <div class="layout__left-sidebar">
+
+      <div class="sidebar-menu">
+        <img src="./assets/t.logo.png" class="brand" style="width: 100px; height:100px;">
+        <div class="sidebar-menu__item--active">
+          <img src="./assets/home.svg" class="sidebar-menu__item-icon" />
+          Home
+        </div>
+        <!--<div class="sidebar-menu__item">
             <img src="./assets/explore.svg" class="sidebar-menu__item-icon" />
             Explore
           </div>
           <div class="sidebar-menu__item">
             <img src="./assets/notifications.svg" class="sidebar-menu__item-icon" />
             Notifications
-          </div>
-          <div class="sidebar-menu__item">
-            <img src="./assets/messages.svg" class="sidebar-menu__item-icon" />
-            <a href="tweet">Messages</a>
-          </div>
-          <div class="sidebar-menu__item">
-            <img src="./assets/bookmark.svg" class="sidebar-menu__item-icon" />
-            Bookmarks
-          </div>
-          <div class="sidebar-menu__item">
-            <img src="./assets/lists.svg" class="sidebar-menu__item-icon" />
-            <a href="dashboard">Lists</a>
-          </div>
-          <div class="sidebar-menu__item">
-            <img src="./assets/profile.svg" class="sidebar-menu__item-icon" />
-            <a href="account">Profile</a>
-          </div>
-          <div class="sidebar-menu__item">
-            <img src="./assets/more.svg" class="sidebar-menu__item-icon" />
-            More
-          </div>
-          <div class="tweet__btn">
-            <button routerLink="/tweet" class="btn btn-lg btn-primary" type="submit">Tweet</button> 
-          </div>
-          <br />
-          <br />
-          <br />
-          <div class="footer">
-            <tbody>
-              <img src="./assets/profile.svg">
-              <tr *ngFor="let user of users;">
-                  <td>{{user.firstName}}</td>
+          </div> -->
+        <div class="sidebar-menu__item">
+          <img src="./assets/messages.svg" class="sidebar-menu__item-icon" />
+          <a href="tweet">Messages</a>
+        </div>
+        <div class="sidebar-menu__item">
+          <img src="./assets/bookmark.svg" class="sidebar-menu__item-icon" />
+          Bookmarks
+        </div>
+        <div class="sidebar-menu__item">
+          <img src="./assets/lists.svg" class="sidebar-menu__item-icon" />
+          <a href="dashboard">Lists</a>
+        </div>
+        <div class="sidebar-menu__item">
+          <img src="./assets/profile.svg" class="sidebar-menu__item-icon" />
+          <a href="account">Profile</a>
+        </div>
+        <div class="sidebar-menu__item">
+          <img src="./assets/more.svg" class="sidebar-menu__item-icon" />
+          More
+        </div>
+        <div class="tweet__btn">
+          <button routerLink="/tweet" class="btn btn-lg btn-primary" type="submit">Tweet</button>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div class="footer">
+          <tbody>
+            <img src="./assets/profile.svg">
+            <tr *ngFor="let user of users;">
+              <td>{{user.firstName}}</td>
 
-                  <td>{{user.email}}</td>
-               </tr>
+              <td>{{user.email}}</td>
+            </tr>
           </tbody>
-          </div>
         </div>
-			</div>
-			<div class="layout__main">
-        <div class="tweet">
-          <div class="block"><img src="./assets/background.jpg"></div>
-        </div>
-        <div>
-          <img class="tweet__author-logo" src="./assets/profile.svg" />
-        </div>
-          
-            <div class="tweet__header">
-              <div class="tweet__author-name">
-                Pragati Tanpure
-              </div>
-            </div>
-              <div class="tweet__author-slug">
-                @Pragati1998
-              </div>
-           
-        <div class="info">
-          <ul>
-            <li routerLink="/tweet">Tweet</li>
-            <li>Following<i class="badge bg-danger">{{quantity}}</i></li>
-            
-            <li>Likes<i class="badge bg-danger">{{quantity}}</i></li>
-          </ul>
-        </div>
-        <div class="para" style="padding: 15px;">
-          <h5>Who to follow</h5>
-     </div> 
-     <div >
-      <div who-to-follow>
-        <img class="author-logo" src="./assets/dd-news.jpg" />
-        <div class="author_name" >DD News</div>
-        <div class="author_slug">@DDNewsLive</div>
-        <div class="discri"><p>Official Twitter account of DD News, the Public Broadcaster of India. हिंदी में 
-          @DDNewsHindi
-          . Follow us on- http://instagram.com/ddnews_official</p></div>
-        
-        <div class="follow"><button button (click)="plus()" class="btn btn-lg btn-primary" type="button">Follow</button>
-            <button button (click)="minus()" class="btn btn-lg btn-primary" type="button" style="margin-left: 10px;">Unfollowollow</button></div>
-      </div>
-      <div who-to-follow>
-        <img class="author-logo" src="./assets/president.jpg" />
-        
-        <div class="author_name" >President of India</div>
-        <div class="author_slug">@rashtrapatibhvn</div>
-        <div class="discri"><p>This is the official Twitter account of Rashtrapati Bhavan and is run by the President’s Secretariat. Tweets from the President are signed #PresidentKovind</p></div>
-        <div class="follow"><button button (click)="plus()" class="btn btn-lg btn-primary" type="button">Follow</button>
-          <button button (click)="minus()" class="btn btn-lg btn-primary" type="button" style="margin-left: 10px;">Unfollowollow</button></div>
-      </div>
-      <div who-to-follow>
-        <img class="author-logo" src="./assets/yogi.jpg" />
-        <div class="discri"><p>मुख्यमंत्री (उत्तर प्रदेश); गोरक्षपीठाधीश्वर, श्री गोरक्षपीठ; सदस्य, विधान सभा, उत्तर प्रदेश; पूर्व सांसद (लोकसभा-लगातार 5 बार) गोरखपुर, उत्तर प्रदेश</p></div>
-        <div class="author_name" >Yogi Adityanath</div>
-        <div class="author_slug">@yogiadityanath</div>
-        <div class="follow"><button button (click)="plus()" class="btn btn-lg btn-primary" type="button">Follow</button>
-          <button button (click)="minus()" class="btn btn-lg btn-primary" type="button" style="margin-left: 10px;">Unfollowollow</button></div>
-      </div>
-      <div who-to-follow>
-        <img class="author-logo" src="./assets/president.jpg" />
-        <div class="discri"><p>This is the official Twitter account of Rashtrapati Bhavan and is run by the President’s Secretariat. Tweets from the President are signed #PresidentKovind</p></div>
-        <div class="author_name" >President of India</div>
-        <div class="author_slug">@rashtrapatibhvn</div>
-        <div class="follow"><button button (click)="plus()" class="btn btn-lg btn-primary" type="button">Follow</button>
-          <button button (click)="minus()" class="btn btn-lg btn-primary" type="button" style="margin-left: 10px;">Unfollowollow</button></div>
       </div>
     </div>
-  </div>
-      
+    <div class="layout__main">
+      <div class="tweet">
+        <div class="block"><img src="./assets/background.jpg"></div>
+      </div>
+      <div>
+        <img class="tweet__author-logo" src="./assets/profile.svg" />
+      </div>
 
-       <!-- <div class="css-1dbjc4n"><div class="css-1dbjc4n r-1bimlpy">
+      <div class="tweet__header">
+        <div class="tweet__author-name">
+          Pragati Tanpure
+        </div>
+      </div>
+      <div class="tweet__author-slug">
+        @Pragati1998
+      </div>
+
+      <div class="info">
+        <ul>
+          <li routerLink="/tweet">Tweet</li>
+          <li>Following<i class="badge bg-danger">{{quantity}}</i></li>
+
+          <li>Likes</li>
+        </ul>
+      </div>
+      <div class="para" style="padding: 15px;">
+        <h5>Who to follow</h5>
+      </div>
+      <div>
+        <div who-to-follow>
+          <img class="author-logo" src="./assets/dd-news.jpg" />
+          <div class="author_name">DD News</div>
+          <div class="author_slug">@DDNewsLive</div>
+          <div class="discri">
+            <p>Official Twitter account of DD News, the Public Broadcaster of India. हिंदी में
+              @DDNewsHindi
+              . Follow us on- http://instagram.com/ddnews_official</p>
+          </div>
+
+          <div class="follow"><button button (click)="plus()" class="btn btn-lg btn-primary"
+              type="button">Follow</button>
+            <button button (click)="minus()" class="btn btn-lg btn-primary" type="button"
+              style="margin-left: 10px;">Unfollowollow</button>
+          </div>
+        </div>
+        <div who-to-follow>
+          <img class="author-logo" src="./assets/president.jpg" />
+
+          <div class="author_name">President of India</div>
+          <div class="author_slug">@rashtrapatibhvn</div>
+          <div class="discri">
+            <p>This is the official Twitter account of Rashtrapati Bhavan and is run by the President’s Secretariat.
+              Tweets from the President are signed #PresidentKovind</p>
+          </div>
+          <div class="follow"><button button (click)="plus()" class="btn btn-lg btn-primary"
+              type="button">Follow</button>
+            <button button (click)="minus()" class="btn btn-lg btn-primary" type="button"
+              style="margin-left: 10px;">Unfollowollow</button>
+          </div>
+        </div>
+        <div who-to-follow>
+          <img class="author-logo" src="./assets/yogi.jpg" />
+          <div class="discri">
+            <p>मुख्यमंत्री (उत्तर प्रदेश); गोरक्षपीठाधीश्वर, श्री गोरक्षपीठ; सदस्य, विधान सभा, उत्तर प्रदेश; पूर्व सांसद
+              (लोकसभा-लगातार 5 बार) गोरखपुर, उत्तर प्रदेश</p>
+          </div>
+          <div class="author_name">Yogi Adityanath</div>
+          <div class="author_slug">@yogiadityanath</div>
+          <div class="follow"><button button (click)="plus()" class="btn btn-lg btn-primary"
+              type="button">Follow</button>
+            <button button (click)="minus()" class="btn btn-lg btn-primary" type="button"
+              style="margin-left: 10px;">Unfollowollow</button>
+          </div>
+        </div>
+        <div who-to-follow>
+          <img class="author-logo" src="./assets/president.jpg" />
+          <div class="discri">
+            <p>This is the official Twitter account of Rashtrapati Bhavan and is run by the President’s Secretariat.
+              Tweets from the President are signed #PresidentKovind</p>
+          </div>
+          <div class="author_name">President of India</div>
+          <div class="author_slug">@rashtrapatibhvn</div>
+          <div class="follow"><button button (click)="plus()" class="btn btn-lg btn-primary"
+              type="button">Follow</button>
+            <button button (click)="minus()" class="btn btn-lg btn-primary" type="button"
+              style="margin-left: 10px;">Unfollowollow</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- <div class="css-1dbjc4n"><div class="css-1dbjc4n r-1bimlpy">
           <div class="css-1dbjc4n r-1bimlpy r-1adg3ll r-1udh08x">
             <div class="r-1adg3ll r-13qz1uu" style="padding-bottom: 33.3333%;">
             </div>
@@ -200,91 +227,93 @@
     <div dir="auto" class="css-901oao css-bfa6kz r-14j79pv r-37j5jr r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-qvutc0">
 
     </div></div></div></div><div class="css-1dbjc4n r-1adg3ll r-6gpygo"><div dir="auto" class="css-901oao r-18jsvk2 r-37j5jr r-a023e6 r-16dba41 r-56xrmm r-bcqeeo r-qvutc0" data-testid="UserProfileHeader_Items"><span dir="ltr" role="presentation" class="css-901oao css-16my406 r-14j79pv r-4qtqp9 r-poiln3 r-1b7u577 r-bcqeeo r-qvutc0" data-testid="UserJoinDate"><svg viewBox="0 0 24 24" aria-hidden="true" class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-1d4mawv r-dnmrzs r-bnwqim r-1plcrui r-lrvibr"><g><path d="M19.708 2H4.292C3.028 2 2 3.028 2 4.292v15.416C2 20.972 3.028 22 4.292 22h15.416C20.972 22 22 20.972 22 19.708V4.292C22 3.028 20.972 2 19.708 2zm.792 17.708c0 .437-.355.792-.792.792H4.292c-.437 0-.792-.355-.792-.792V6.418c0-.437.354-.79.79-.792h15.42c.436 0 .79.355.79.79V19.71z"></path><circle cx="7.032" cy="8.75" r="1.285"></circle><circle cx="7.032" cy="13.156" r="1.285"></circle><circle cx="16.968" cy="8.75" r="1.285"></circle><circle cx="16.968" cy="13.156" r="1.285"></circle><circle cx="12" cy="8.75" r="1.285"></circle><circle cx="12" cy="13.156" r="1.285"></circle><circle cx="7.032" cy="17.486" r="1.285"></circle><circle cx="12" cy="17.486" r="1.285"></circle></g></svg><span class="css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0">Joined July 2022</span></span></div></div><div class="css-1dbjc4n r-13awgt0 r-18u37iz r-1w6e6rj"><div class="css-1dbjc4n r-1mf7evn"><a href="/pragati_tanpure/following" dir="auto" role="link" class="css-4rbku5 css-18t94o4 css-901oao r-18jsvk2 r-1loqt21 r-37j5jr r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-18jsvk2 r-poiln3 r-1b43r93 r-b88u0q r-1cwl3u0 r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0">7</span></span> <span class="css-901oao css-16my406 r-14j79pv r-poiln3 r-1b43r93 r-1cwl3u0 r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0">Following</span></span></a></div><div class="css-1dbjc4n"><a href="/pragati_tanpure/followers" dir="auto" role="link" class="css-4rbku5 css-18t94o4 css-901oao r-18jsvk2 r-1loqt21 r-37j5jr r-a023e6 r-16dba41 r-rjixqe r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-18jsvk2 r-poiln3 r-1b43r93 r-b88u0q r-1cwl3u0 r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0">0</span></span> <span class="css-901oao css-16my406 r-14j79pv r-poiln3 r-1b43r93 r-1cwl3u0 r-bcqeeo r-qvutc0"><span class="css-901oao css-16my406 r-poiln3 r-bcqeeo r-qvutc0">Followers</span></span></a></div></div></div></div> */
- -->    
-			<div class="layout__right-sidebar-container">
-        
-        <div class="layout__right-sidebar">
-          <div class="form-group">
-            <input type="text" placeholder="search users by there Name">
+ -->
+    <div class="layout__right-sidebar-container">
+
+      <div class="layout__right-sidebar">
+        <div class="form-group">
+          <input type="text" placeholder="search users by there Name">
+        </div>
+        <span class="fas fa-search search-icon"
+          style="position: absolute; z-index: 15; left:85%; top:30px; color:blue"></span>
+        <div class="trends-for-you">
+          <div class="trends-for-you__block">
+            <div class="trends-for-you__heading">
+              Trendes for you
+            </div>
           </div>
-          <span class="fas fa-search search-icon" style="position: absolute; z-index: 15; left:85%; top:30px; color:blue"></span>
-          <div class="trends-for-you">
-            <div class="trends-for-you__block">
-              <div class="trends-for-you__heading">
-                Trendes for you
-              </div>
+          <div class="trends-for-you__block">
+            <div class="trends-for-you__meta-information">
+              Trending in India
             </div>
-            <div class="trends-for-you__block">
-              <div class="trends-for-you__meta-information">
-                Trending in India
-              </div>
-              <div class="trends-for-you__trend-name">
-                #iPhone12
-              </div>
-              <div class="trends-for-you__meta-information">
-                155k Tweets
-              </div>
+            <div class="trends-for-you__trend-name">
+              #iPhone12
             </div>
-            <div class="trends-for-you__block">
-              <div class="trends-for-you__meta-information">
-                Trending in India
-              </div>
-              <div class="trends-for-you__trend-name">
-                #iPhone12
-              </div>
-              <div class="trends-for-you__meta-information">
-                155k Tweets
-              </div>
+            <div class="trends-for-you__meta-information">
+              155k Tweets
             </div>
-            <div class="trends-for-you__block">
-              <div class="trends-for-you__meta-information">
-                Trending in India
-              </div>
-              <div class="trends-for-you__trend-name">
-                #iPhone12
-              </div>
-              <div class="trends-for-you__meta-information">
-                155k Tweets
-              </div>
+          </div>
+          <div class="trends-for-you__block">
+            <div class="trends-for-you__meta-information">
+              Trending in India
             </div>
-            <div class="trends-for-you__block">
-              <div class="trends-for-you__meta-information">
-                Trending in India
-              </div>
-              <div class="trends-for-you__trend-name">
-                #iPhone12
-              </div>
-              <div class="trends-for-you__meta-information">
-                155k Tweets
-              </div>
+            <div class="trends-for-you__trend-name">
+              #iPhone12
             </div>
-            <div class="trends-for-you__block">
-              <div class="trends-for-you__meta-information">
-                Trending in India
-              </div>
-              <div class="trends-for-you__trend-name">
-                #Amazon
-              </div>
-              <div class="trends-for-you__meta-information">
-                200k Tweets
-              </div>
+            <div class="trends-for-you__meta-information">
+              155k Tweets
             </div>
-            <div class="trends-for-you__block">
-              <div class="trends-for-you__meta-information">
-                Trending in India
-              </div>
-              <div class="trends-for-you__trend-name">
-                #iPhone12
-              </div>
-              <div class="trends-for-you__meta-information">
-                155k Tweets
-              </div>
-              
+          </div>
+          <div class="trends-for-you__block">
+            <div class="trends-for-you__meta-information">
+              Trending in India
             </div>
+            <div class="trends-for-you__trend-name">
+              #iPhone12
+            </div>
+            <div class="trends-for-you__meta-information">
+              155k Tweets
+            </div>
+          </div>
+          <div class="trends-for-you__block">
+            <div class="trends-for-you__meta-information">
+              Trending in India
+            </div>
+            <div class="trends-for-you__trend-name">
+              #iPhone12
+            </div>
+            <div class="trends-for-you__meta-information">
+              155k Tweets
+            </div>
+          </div>
+          <div class="trends-for-you__block">
+            <div class="trends-for-you__meta-information">
+              Trending in India
+            </div>
+            <div class="trends-for-you__trend-name">
+              #Amazon
+            </div>
+            <div class="trends-for-you__meta-information">
+              200k Tweets
+            </div>
+          </div>
+          <div class="trends-for-you__block">
+            <div class="trends-for-you__meta-information">
+              Trending in India
+            </div>
+            <div class="trends-for-you__trend-name">
+              #iPhone12
+            </div>
+            <div class="trends-for-you__meta-information">
+              155k Tweets
+            </div>
+
           </div>
         </div>
-			
-			</div>
-		</div>
-	</body>
+      </div>
+
+    </div>
+  </div>
+</body>
+
 </html>

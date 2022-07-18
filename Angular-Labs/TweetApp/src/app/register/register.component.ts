@@ -11,14 +11,14 @@ import { AuthService } from '../services/auth.service';
 export class RegisterComponent implements OnInit {
 
   registerUserData: UserData = new UserData();
-  constructor(private _auth: AuthService,private _router:Router) { }
+  constructor(private _auth: AuthService, private _router: Router) { }
 
   ngOnInit(): void {
   }
 
   registerUser() {
     this._auth.registerUser(this.registerUserData).subscribe(res => {
-      localStorage.setItem('token',res.token);
+      localStorage.setItem('token', res.token);
       this._router.navigate(['/login'])
     },
       err => console.log(err));
