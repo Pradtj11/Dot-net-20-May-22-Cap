@@ -1,9 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using TweetWebApi.Interfaces;
 using TweetWebApi.Models;
 using TweetWebApi.ViewModels;
@@ -16,6 +12,10 @@ namespace TweetWebApi.Controllers
     {
         TweetDBContext db;
         IJWTMangerRepository iJWTMangerRepository;
+
+        //public object WebSecurity { get; private set; }
+        //public object EmailManager { get; private set; }
+
         public LoginController(TweetDBContext _db, IJWTMangerRepository _iJWTMangerRepository)
         {
             db = _db;
@@ -42,6 +42,7 @@ namespace TweetWebApi.Controllers
             return Ok(token);
         }
 
+
         [HttpPost]
         [Route("register")]
         public IActionResult Register(RegisterViewModel registerViewModel)
@@ -53,7 +54,7 @@ namespace TweetWebApi.Controllers
             login.LoginId = registerViewModel.LoginId;
             login.Password = registerViewModel.Password;
             login.ConfirmPassword = registerViewModel.ConfirmPassword;
-            login.ContactNumber = registerViewModel.ContactNumber;
+            login.ContactNumber = registerViewModel.ContactNumber; 
             var token = iJWTMangerRepository.Authenicate(login, true);
             if (token == null)
             {
@@ -61,6 +62,22 @@ namespace TweetWebApi.Controllers
             }
             return Ok(token);
         }
+
+       /* [HttpGet("forgot-password")]
+         public ActionResult ForgotPassword()
+         {
+             return View();
+         }
+        [HttpPost("forgot-password")]
+         public ActionResult ForgotPassword(ForgotPasswordModel model)
+         {
+             return View();
+         }
+             if (ModelState.IsValid)
+             {
+                 
+             return View();
+         }*/
     }
 }
 

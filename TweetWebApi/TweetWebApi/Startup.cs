@@ -1,4 +1,4 @@
-using EcommerceWebApi.ViewModels;
+
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -17,6 +17,7 @@ using System.Text;
 using System.Threading.Tasks;
 using TweetWebApi.Interfaces;
 using TweetWebApi.Models;
+using TweetWebApi.ViewModels;
 
 namespace TweetWebApi
 {

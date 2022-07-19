@@ -60,5 +60,11 @@ export class TweetComponent implements OnInit {
     var index=this.users.indexOf(input);
     this.users.splice(index,1);
   }
+  /*UpdateTweet(){
+    console.log(this.EditTweet);
+    this.user.updateTweet(this.EditTweet)
+
+  }*/
+  
 
 }

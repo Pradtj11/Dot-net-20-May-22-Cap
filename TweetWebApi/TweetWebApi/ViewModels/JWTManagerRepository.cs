@@ -1,6 +1,4 @@
-﻿using TweetWebApi.Interfaces;
-using TweetWebApi.Models;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -9,9 +7,11 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using TweetWebApi.Interfaces;
+using TweetWebApi.Models;
 using TweetWebApi.ViewModels;
 
-namespace EcommerceWebApi.ViewModels
+namespace TweetWebApi.ViewModels
 {
     public class JWTManagerRepository : IJWTMangerRepository
     {
@@ -47,7 +47,7 @@ namespace EcommerceWebApi.ViewModels
                 _isAdmin = db.TblLogins.Any(x => x.Email == registerViewModel.Email && x.Password == registerViewModel.Password);
             }
 
-                UserRecords = db.TblLogins.ToList().ToDictionary(x => x.Email, x => x.Password);
+            UserRecords = db.TblLogins.ToList().ToDictionary(x => x.Email, x => x.Password);
             if (!UserRecords.Any(x => x.Key == registerViewModel.Email && x.Value == registerViewModel.Password))
             {
                 return null;

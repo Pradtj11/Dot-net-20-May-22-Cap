@@ -10,5 +10,6 @@ namespace TweetWebApi.Interfaces
     {
         Tokens Authenicate(LoginViewModel users, bool IsRegister);
         object Authenicate(RegisterViewModel register, bool v);
+    
     }
 }

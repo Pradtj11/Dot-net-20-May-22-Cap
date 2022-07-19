@@ -27,10 +27,10 @@
           <img src="./assets/messages.svg" class="sidebar-menu__item-icon" />
           <a href="tweet">Messages</a>
         </div>
-        <div class="sidebar-menu__item">
+        <!--<div class="sidebar-menu__item">
           <img src="./assets/bookmark.svg" class="sidebar-menu__item-icon" />
           Bookmarks
-        </div>
+        </div> -->
         <div class="sidebar-menu__item">
           <img src="./assets/lists.svg" class="sidebar-menu__item-icon" />
           <a href="dashboard">Lists</a>
@@ -39,13 +39,15 @@
           <img src="./assets/profile.svg" class="sidebar-menu__item-icon" />
           <a href="account">Profile</a>
         </div>
-        <div class="sidebar-menu__item">
+        <!-- <div class="sidebar-menu__item">
           <img src="./assets/more.svg" class="sidebar-menu__item-icon" />
           More
-        </div>
+        </div>-->
         <div class="tweet__btn">
           <button routerLink="/tweet" class="btn btn-lg btn-primary" type="submit">Tweet</button>
         </div>
+        <br />
+        <br />
         <br />
         <br />
         <br />
@@ -56,7 +58,7 @@
             <img src="./assets/profile.svg">
             <tr *ngFor="let user of users;">
               <td>{{user.firstName}}</td>
-              <td>{{user.lastName}}</td>
+              <!--<td>{{user.lastName}}</td>-->
               <td>{{user.email}}</td>
             </tr>
           </tbody>
@@ -172,8 +174,16 @@
             </div>
           </div>
           <div class="tweet__content">
-            Birthday wishes to Mizoram CM Shri Zoramthanga Ji.<br /> I pray for his long and healthy life.
-            @ZoramthangaCM
+
+                  Watch: बेरोजगारों को विरोध करने का भी हक नहीं, शांतिपूर्ण प्रदर्शन पर भी सजा क्यों ?  
+                  देखें, 'घंटी बजाओ' @akhileshanandd के साथ
+                  <br />
+                  http://abplive.com/live-tv 
+                  <br />
+                  #GhantiBajaoOnABP #SSCGD2018 #SSCGDProtest #StudentProtest #India
+            <video controls>
+                <source src="https://twitter.com/i/status/1549077280042803200" type="video/mp4">
+          </video>
           </div>
           <div>
             <p (click)="plus()"
