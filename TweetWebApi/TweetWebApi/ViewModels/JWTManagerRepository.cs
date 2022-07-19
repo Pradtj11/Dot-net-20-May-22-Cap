@@ -16,6 +16,7 @@ namespace EcommerceWebApi.ViewModels
     public class JWTManagerRepository : IJWTMangerRepository
     {
         Dictionary<string, string> UserRecords;
+        private bool _isAdmin;
         private readonly IConfiguration configuration;
         private readonly TweetDBContext db;
 
@@ -41,8 +42,12 @@ namespace EcommerceWebApi.ViewModels
                 db.TblLogins.Add(tblLogin);
                 db.SaveChanges();
             }
-           
-            UserRecords = db.TblLogins.ToList().ToDictionary(x => x.Email, x => x.Password);
+            else
+            {
+                _isAdmin = db.TblLogins.Any(x => x.Email == registerViewModel.Email && x.Password == registerViewModel.Password);
+            }
+
+                UserRecords = db.TblLogins.ToList().ToDictionary(x => x.Email, x => x.Password);
             if (!UserRecords.Any(x => x.Key == registerViewModel.Email && x.Value == registerViewModel.Password))
             {
                 return null;

@@ -35,7 +35,7 @@ export class AdminComponent implements OnInit {
       productQuantity:Number(this.adminprod.productQuantity),
 
     }
-    this.httpc.post("https://localhost:44338/api/Product",admindto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
+    this.httpc.post("https://ecommercewebapi20220718223625.azurewebsites.net/api/Product",admindto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
     this.adminprod=new Product();
   }
   PostSuccess(res:any){
@@ -48,7 +48,7 @@ export class AdminComponent implements OnInit {
 
   Show(){
     console.log("Hi");
-    this.httpc.get("https://localhost:44338/api/Product").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));
+    this.httpc.get("https://ecommercewebapi20220718223625.azurewebsites.net/api/Product").subscribe(res=>this.GetSuccess(res),res=>this.GetError(res));
   }
   GetSuccess(input:any){
     this.adminprods=(input);

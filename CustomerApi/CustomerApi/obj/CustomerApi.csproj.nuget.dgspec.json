@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\source\\repos\\CustomerApi\\CustomerApi\\CustomerApi.csproj": {}
+    "C:\\Users\\HP\\Desktop\\Dont net training\\CustomerApi\\CustomerApi\\CustomerApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\source\\repos\\CustomerApi\\CustomerApi\\CustomerApi.csproj": {
+    "C:\\Users\\HP\\Desktop\\Dont net training\\CustomerApi\\CustomerApi\\CustomerApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\source\\repos\\CustomerApi\\CustomerApi\\CustomerApi.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Dont net training\\CustomerApi\\CustomerApi\\CustomerApi.csproj",
         "projectName": "CustomerApi",
-        "projectPath": "C:\\Users\\HP\\source\\repos\\CustomerApi\\CustomerApi\\CustomerApi.csproj",
+        "projectPath": "C:\\Users\\HP\\Desktop\\Dont net training\\CustomerApi\\CustomerApi\\CustomerApi.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\source\\repos\\CustomerApi\\CustomerApi\\obj\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\Dont net training\\CustomerApi\\CustomerApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",

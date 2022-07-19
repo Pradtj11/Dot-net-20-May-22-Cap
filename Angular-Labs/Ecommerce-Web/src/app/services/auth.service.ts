@@ -9,9 +9,9 @@ export class AuthService {
   getusers() {
     throw new Error('Method not implemented.');
   }
-  private _registerUrl = "https://localhost:44338/api/Login/register";
-  private _loginUrl = "https://localhost:44338/api/Login/login";
-  private _UserUrl = "https://localhost:44338/api/Login/User"
+  private _registerUrl = "https://ecommercewebapi20220718223625.azurewebsites.net/api/Login/register";
+  private _loginUrl = "https://ecommercewebapi20220718223625.azurewebsites.net/api/Login/login";
+  private _UserUrl = "https://ecommercewebapi20220718223625.azurewebsites.net/api/Login/User"
  
 
   constructor(private http: HttpClient, private _router:Router) { }
