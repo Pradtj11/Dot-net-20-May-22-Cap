@@ -38,8 +38,7 @@
                 </tr>
 
 
-                <input style="background-color: green; margin: 5px;" type="submit" (click)="AddTweet()"
-                    value="Post Tweet" />
+                <input value={{(isEdit==true)?"Update Tweet":"Add Tweet"}} type="button" (click)="AddTweet()">
                 <input style="background-color: blueviolet;" type="button" (click)="getData()" value="Show All Tweets" />
                <!-- <input style="background-color: royalblue; margin-left: 5px;" type="button" value="Back" routerlink="/home" />-->
             </table>

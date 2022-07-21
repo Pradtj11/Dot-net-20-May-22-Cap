@@ -27,7 +27,7 @@ namespace TweetWebApi.ViewModels
             db = _db;
             configuration = _configuration;
         }
-        public Tokens Authenicate(LoginViewModel registerViewModel, bool IsRegister)
+        public Tokens Authenicate(LoginViewModel registerViewModel , bool IsRegister)
         {
             if (IsRegister)
             {

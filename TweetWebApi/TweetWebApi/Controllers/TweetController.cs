@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TweetWebApi.Models;
 
+
 namespace TweetWebApi.Controllers
 {
     [Route("api/[controller]")]
@@ -22,6 +23,11 @@ namespace TweetWebApi.Controllers
         {
             return db.TblTweets;
         }
+        /*public IEnumerable<TblTweet> GetProducts(string search)
+        {
+            return db.TblTweets.Where(x => x.AuthorName.Contains(search));
+        }
+        */
         [HttpPost]
         public string Post([FromBody] TblTweet user)
         {

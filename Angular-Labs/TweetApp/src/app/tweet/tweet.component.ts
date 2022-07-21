@@ -12,11 +12,12 @@ import { TweetService } from '../services/tweet.service';
 export class TweetComponent implements OnInit {
 
   constructor(public httpc:HttpClient, private _tweetservice:TweetService, private _router:Router) { }
-
+  isEdit=false;
   ngOnInit(): void {
   }
   user: Tweet=new Tweet();
   users:Array<Tweet>=new Array<Tweet>();
+  
 
   AddTweet()
   {
@@ -32,7 +33,13 @@ export class TweetComponent implements OnInit {
       tweetDescription:this.user.tweetDescription,
 
     }
-    this.httpc.post("https://localhost:44343/api/Tweet",admindto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
+    if(this.isEdit){
+      this.httpc.put("https://localhost:44343/api/Tweet",admindto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
+    }
+    else{
+      this.httpc.post("https://localhost:44343/api/Tweet",admindto).subscribe(res=>this.PostSuccess(res),res=>this.PostError(res));
+    }
+    
     this.user=new Tweet();
   }
   PostSuccess(res:any){

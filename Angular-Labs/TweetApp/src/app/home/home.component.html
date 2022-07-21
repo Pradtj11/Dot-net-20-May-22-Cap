@@ -65,24 +65,26 @@
         </div>
       </div>
     </div>
+    <div class="container">
+      <div *ngFor="let tweet of tweets" >
     <div class="layout__main">
       <div class="tweet">
-        <img class="tweet__author-logo" src="./assets/PM.jpg" />
+        <img class="tweet__author-logo" src="./assets/{{tweet.authorLogo}}" />
         <div class="tweet__main">
           <div class="tweet__header">
             <div class="tweet__author-name">
-              Narendra Modi
+              {{tweet.authorName}}
             </div>
             <div class="tweet__author-slug">
-              @narendramodi
+              {{tweet.authorSlug}}
             </div>
             <div class="tweet__publish-time">
-              38m ago
+              {{tweet.tweetTime}}
             </div>
           </div>
           <div class="tweet__content">
-            Birthday wishes to Mizoram CM Shri Zoramthanga Ji.<br /> I pray for his long and healthy life.
-            @ZoramthangaCM
+            {{tweet.tweetDescription}}
+            <img class="tweet__img" src="./assets/{{tweet.tweetImage}}">
           </div>
           <div>
             <p (click)="plus()"
@@ -92,10 +94,9 @@
             <i class="fa fa-share" routerLink="sharetweet"
               style="float: left; margin-top: 22px; margin-left:30px; width: 25px; font-size: 25px; height:30px; cursor: pointer;"></i>
           </div>
-
         </div>
       </div>
-      <div class="tweet">
+      <!--<div class="tweet">
         <img class="tweet__author-logo" src="./assets/jyamyang.jpg" />
         <div class="tweet__main">
           <div class="tweet__header">
@@ -222,8 +223,10 @@
               style="float: left; margin-top: 22px; margin-left:30px; width: 25px; font-size: 25px; height:30px; cursor: pointer;"></i>
           </div>
         </div>
-      </div>
+      </div>-->
     </div>
+  </div>
+</div>
     <div class="layout__right-sidebar-container">
 
       <div class="layout__right-sidebar">

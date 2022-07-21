@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class ProductService {
-  private _productUrl = "https://localhost:44338/api/Product";
+  private _productUrl = "https://ecommercewebapi20220718223625.azurewebsites.net/api/Product";
   constructor(private http: HttpClient,private _router:Router) { }
 
   
