@@ -37,10 +37,11 @@
                     </td>
                 </tr>
 
-
-                <input value={{(isEdit==true)?"Update Tweet":"Add Tweet"}} type="button" (click)="AddTweet()">
-                <input style="background-color: blueviolet;" type="button" (click)="getData()" value="Show All Tweets" />
-               <!-- <input style="background-color: royalblue; margin-left: 5px;" type="button" value="Back" routerlink="/home" />-->
+                <div>
+                    <input style="background-color: blueviolet;" type="button" (click)="AddTweet()" value="Add Tweet"/>
+                    <input style="background-color: blueviolet;" type="button" (click)="getData()" value="Show All Tweets" />
+                    <input style="background-color: royalblue; margin-left: 5px;" type="button" value="Back" routerlink="/home" />
+                </div>
             </table>
         </div>
         <div class="column">
