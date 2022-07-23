@@ -16,14 +16,19 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
   LoginUser() {
-    this._auth.loginUser(this.loginUserData).subscribe(res => {
+    var userDataObject={
+    email:this.loginUserData.email,
+    password:this.loginUserData.password
+  }
+    this._auth.loginUser(userDataObject).subscribe((res: { token: string; isAdmin: any; }) => {
       localStorage.setItem('token', res.token);
-      if (res.isAdmin)
-        this._router.navigate(['/home']);
-      else
-        this._router.navigate(['/home']);
+      this._router.navigate(['/home']);
     }, err => console.log(err));
   }
 
+  hasError(typeofvalidator:string,controlname:string):Boolean{
+    return this.loginUserData.formLoginGroup.controls[controlname].hasError(typeofvalidator);
+  }
 }

@@ -41,6 +41,7 @@ export class TweetComponent implements OnInit {
     }
     
     this.user=new Tweet();
+
   }
   PostSuccess(res:any){
     console.log(res);
@@ -67,11 +68,14 @@ export class TweetComponent implements OnInit {
     var index=this.users.indexOf(input);
     this.users.splice(index,1);
   }
-  /*UpdateTweet(){
+  UpdateTweet(){
     console.log(this.EditTweet);
     this.user.updateTweet(this.EditTweet)
 
-  }*/
-  
+  }
 
+}
+
+function UpdateTweet() {
+  throw new Error('Function not implemented.');
 }

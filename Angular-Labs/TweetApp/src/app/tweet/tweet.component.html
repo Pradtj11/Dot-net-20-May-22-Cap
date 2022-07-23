@@ -12,6 +12,12 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>Your logo</td>
+                    <td>
+                        <input [(ngModel)]="user.authorLogo" type="text">
+                    </td>
+                </tr>
+                <tr>
                     <td>Your Slug</td>
                     <td>
                         <input [(ngModel)]="user.authorSlug" type="text">
@@ -38,9 +44,11 @@
                 </tr>
 
                 <div>
-                    <input style="background-color: blueviolet;" type="button" (click)="AddTweet()" value="Add Tweet"/>
-                    <input style="background-color: blueviolet;" type="button" (click)="getData()" value="Show All Tweets" />
-                    <input style="background-color: royalblue; margin-left: 5px;" type="button" value="Back" routerlink="/home" />
+                    <input style="background-color: blueviolet;" type="button" (click)="AddTweet()" value="Add Tweets" />
+                    <input style="background-color: blueviolet;" type="button" (click)="getData()"
+                        value="Show All Tweets" />
+                    <input style="background-color: royalblue; margin-left: 5px;" type="button" value="Back"
+                        routerlink="/home" />
                 </div>
             </table>
         </div>
@@ -66,8 +74,9 @@
                     <td>{{item.tweetImage}}</td>
 
                     <td>
-                        <i class="fa fa-edit" style="height:40px;" (click)="EditTweet(item)" ></i></td>
-                        <td><i class="fa fa-trash" style="height:40px;" (click)="DeleteTweet(item)" ></i></td>
+                        <i class="fa fa-edit" style="height:40px;" (click)="EditTweet(item)"></i>
+                    </td>
+                    <td><i class="fa fa-trash" style="height:40px;" (click)="DeleteTweet(item)"></i></td>
                 </tr>
             </table>
         </div>

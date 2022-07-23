@@ -31,6 +31,10 @@ namespace TweetWebApi.ViewModels
         {
             if (IsRegister)
             {
+                if (!db.TblLogins.Any(x => x.Email == registerViewModel.Email && x.Password == registerViewModel.Password))
+                {
+                    return null;
+                }
                 TblLogin tblLogin = new TblLogin();
                 tblLogin.FirstName = registerViewModel.FirstName;
                 tblLogin.LastName = registerViewModel.LastName;

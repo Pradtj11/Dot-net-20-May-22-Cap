@@ -17,7 +17,12 @@ export class RegisterComponent implements OnInit {
   }
 
   registerUser() {
-    this._auth.registerUser(this.registerUserData).subscribe(res => {
+    var userDataObject={
+      email:this.registerUserData.email,
+      password:this.registerUserData.password
+    }
+  
+    this._auth.registerUser(userDataObject).subscribe(res => {
       localStorage.setItem('token', res.token);
       this._router.navigate(['login'])
     },
