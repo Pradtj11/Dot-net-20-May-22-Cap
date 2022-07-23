@@ -3,9 +3,9 @@
 <body>
 
     <div class="row">
-        <div class="column" style="border: 2px solid black">
+        <div class="column" style="border: 2px solid black; margin: 10px;">
             <table>
-                <tr>
+                <!-- <tr>
                     <td>Your account name</td>
                     <td>
                         <input [(ngModel)]="user.authorName" type="text">
@@ -16,39 +16,36 @@
                     <td>
                         <input [(ngModel)]="user.authorLogo" type="text">
                     </td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td>Your Slug</td>
                     <td>
                         <input [(ngModel)]="user.authorSlug" type="text">
                     </td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td>Tweet Time</td>
                     <td>
                         <input [(ngModel)]="user.tweetTime" type="text">
                     </td>
-                </tr>
+                </tr> -->
 
                 <tr>
                     <td>Compose Tweet</td>
                     <td>
-                        <input [(ngModel)]="user.tweetDescription" type="text">
+                        <textarea [(ngModel)]="user.tweetDescription" type="text"></textarea>
                     </td>
                 </tr>
                 <tr>
                     <td>Tweet Image</td>
                     <td>
-                        <input [(ngModel)]="user.tweetImage" type="text">
+                        <input type="file" (change)="onFileChanged($event)" [(ngModel)]="user.tweetImage" />
                     </td>
                 </tr>
 
                 <div>
-                    <input value={{(isEdit==true)?"Update Tweet":"Add Tweet"}} style="background-color: blueviolet;" type="button" (click)="AddTweet()" value="Add Tweets">
-                    <input style="background-color: blueviolet;" type="button" (click)="getData()"
-                        value="Show All Tweets" />
-                    <input style="background-color: royalblue; margin-left: 5px;" type="button" value="Back"
-                        routerlink="/home" />
+                    <input value='(isEdit==true)?"Update Tweet":"Add Tweet"' class="btn btn-primary" type="button" (click)="AddTweet()" value="Add Tweets">
+                    <a style="background-color: royalblue; margin-left: 5px;"  class="btn btn-secondary" [routerLink]="['/home']" >Back </a>
                 </div>
             </table>
         </div>
@@ -71,7 +68,7 @@
                     <td>{{item.authorSlug}}</td>
                     <td>{{item.tweetTime}}</td>
                     <td>{{item.tweetDescription}}</td>
-                    <td>{{item.tweetImage}}</td>
+                    <td><img src="{{item.tweetImage}}" height="10%" width="10%"/></td>
 
                     <td>
                         <i class="fa fa-edit" style="height:40px;" (click)="EditTweet(item)"></i>

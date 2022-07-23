@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\Case-Studies\\Group-7\\TweetWebApi\\TweetWebApi\\TweetWebApi.csproj": {}
+    "C:\\Users\\HP\\Desktop\\Dont net training\\Case-Study-7-TweetApp-main\\TweetWebApi\\TweetWebApi\\TweetWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\Case-Studies\\Group-7\\TweetWebApi\\TweetWebApi\\TweetWebApi.csproj": {
+    "C:\\Users\\HP\\Desktop\\Dont net training\\Case-Study-7-TweetApp-main\\TweetWebApi\\TweetWebApi\\TweetWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\Case-Studies\\Group-7\\TweetWebApi\\TweetWebApi\\TweetWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\HP\\Desktop\\Dont net training\\Case-Study-7-TweetApp-main\\TweetWebApi\\TweetWebApi\\TweetWebApi.csproj",
         "projectName": "TweetWebApi",
-        "projectPath": "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\Case-Studies\\Group-7\\TweetWebApi\\TweetWebApi\\TweetWebApi.csproj",
-        "packagesPath": "C:\\Users\\LEVEL UP SOLUTIONS 1\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\LEVEL UP SOLUTIONS 1\\Desktop\\Case-Studies\\Group-7\\TweetWebApi\\TweetWebApi\\obj\\",
+        "projectPath": "C:\\Users\\HP\\Desktop\\Dont net training\\Case-Study-7-TweetApp-main\\TweetWebApi\\TweetWebApi\\TweetWebApi.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HP\\Desktop\\Dont net training\\Case-Study-7-TweetApp-main\\TweetWebApi\\TweetWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\LEVEL UP SOLUTIONS 1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.410\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
         }
       }
     }

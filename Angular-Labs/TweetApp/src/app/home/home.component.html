@@ -17,11 +17,11 @@
         </div>
         <div class="sidebar-menu__item">
           <img src="./assets/messages.svg" class="sidebar-menu__item-icon" />
-          <a href="tweet">Messages</a>
+          <a href="tweet">My Tweets</a>
         </div>
         <div class="sidebar-menu__item">
           <img src="./assets/lists.svg" class="sidebar-menu__item-icon" />
-          <a href="dashboard">Lists</a>
+          <a href="dashboard">My Followers</a>
         </div>
         <div class="sidebar-menu__item">
           <img src="./assets/profile.svg" class="sidebar-menu__item-icon" />
@@ -68,7 +68,7 @@
           </div>
           <div class="tweet__content">
             {{tweet.tweetDescription}}
-            <img class="tweet__img" src="./assets/{{tweet.tweetImage}}">
+            <img class="tweet__img" src="{{tweet.tweetImage}}">
           </div>
           <div>
             <p (click)="plus()"

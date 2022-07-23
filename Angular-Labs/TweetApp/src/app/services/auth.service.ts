@@ -34,5 +34,8 @@ export class AuthService {
     return this.http.get<any>(this._UserUrl)
     
   }
+  getToken(){
+    return localStorage.getItem('token');
+  }
 
 }

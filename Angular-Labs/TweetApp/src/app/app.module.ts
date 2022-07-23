@@ -16,7 +16,7 @@ import { SearchComponent } from './search/search.component';
 import { FilterPipe } from './shared/filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharetweetComponent } from './sharetweet/sharetweet.component';
-
+import { JwtHelperService,JWT_OPTIONS } from '@auth0/angular-jwt';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +37,7 @@ import { SharetweetComponent } from './sharetweet/sharetweet.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [AuthService],
+  providers: [AuthService,{provide:JWT_OPTIONS,useValue:JWT_OPTIONS},JwtHelperService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

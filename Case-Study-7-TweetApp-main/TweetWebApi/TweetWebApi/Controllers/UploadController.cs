@@ -31,7 +31,7 @@ namespace TweetWebApi.Controllers
                     {
                         file.CopyTo(stream);
                     }
-                    string connectionString = "DefaultEndpointsProtocol=https;AccountName=testaccountimage007;AccountKey=uvKVThl1//QaOeoZ2h0ePTPy4cRcvs+HK0D9vldrRhc8iH6Rc4vSPDkKLoQB7MtajOBOWrrDA93D+AStd/IiIA==;EndpointSuffix=core.windows.net";
+                    string connectionString = "DefaultEndpointsProtocol=https;AccountName=tweetimage;AccountKey=emLHPBXxskXGWIHEdZVeemehyI0a8739bIRhk4L9DDLOMvjBhdficcP16NzgiWhQCA142uG3nLON+AStsfexfw==;EndpointSuffix=core.windows.net";
                     string containerName = "images";
                     BlobContainerClient container = new BlobContainerClient(connectionString, containerName);
                     var blob = container.GetBlobClient(fileName);
