@@ -33,7 +33,7 @@
                 <tr>
                     <td>Compose Tweet</td>
                     <td>
-                        <textarea [(ngModel)]="user.tweetDescription" type="text"></textarea>
+                        <textarea [(ngModel)]="user.tweetDescription" type="text" rows="5" cols="20"></textarea>
                     </td>
                 </tr>
                 <tr>
@@ -53,20 +53,20 @@
 
             <table border="2">
                 <tr style="background-color:grey">
-                    <td style="padding:10px;"> AuthorName</td>
+                    <!--<td style="padding:10px;"> AuthorName</td>
                     <td style="padding:10px;"> AuthorName</td>
                     <td style="padding: 10px;"> AuthorSlug</td>
-                    <td style="padding: 10px;"> TweetTime</td>
+                    <td style="padding: 10px;"> TweetTime</td>-->
                     <td style="padding: 10px;"> TweetDescription</td>
                     <td style="padding: 10px;"> TweetImage</td>
                     <td style="padding: 10px;" colspan="2">Action</td>
 
                 </tr>
                 <tr *ngFor="let item of users" style="background-color: lightgrey;">
-                    <td>{{item.id}}</td>
+                    <!--<td>{{item.id}}</td>
                     <td>{{item.authorName}}</td>
                     <td>{{item.authorSlug}}</td>
-                    <td>{{item.tweetTime}}</td>
+                    <td>{{item.tweetTime}}</td>-->
                     <td>{{item.tweetDescription}}</td>
                     <td><img src="{{item.tweetImage}}" height="10%" width="10%"/></td>
 

@@ -52,7 +52,7 @@
             <div class="tweet__author-name">
               {{tweet.authorName}}
             </div>
-            <div class="tweet__author-slug">
+            <div class="tweet__author-slug"  routerLink="/dashboard">
               {{tweet.authorSlug}}
             </div>
             <div class="tweet__publish-time">
@@ -68,8 +68,7 @@
               style="margin-right:10px; width: 30px; color: red; height:20px; font-size: 40px; cursor: pointer; float: left;">
               &hearts;</p>
             <i class="badge bg-danger" style="float: left; margin-top: 22px; margin-left:0px;">{{quantity}}</i>
-            <i class="fa fa-share" routerLink="sharetweet"
-              style="float: left; margin-top: 22px; margin-left:30px; width: 25px; font-size: 25px; height:30px; cursor: pointer;"></i>
+            
           </div>
         </div>
       </div>    
