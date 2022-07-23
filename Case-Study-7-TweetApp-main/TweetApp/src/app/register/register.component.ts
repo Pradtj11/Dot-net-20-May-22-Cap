@@ -11,39 +11,20 @@ import { AuthService } from '../services/auth.service';
 export class RegisterComponent implements OnInit {
 
   registerUserData: UserData = new UserData();
-  modelText:string="";
-  modelHeader:string="";
-  showSpinner:boolean=false;
   constructor(private _auth: AuthService, private _router: Router) { }
 
   ngOnInit(): void {
   }
-  DisplayModalPopup(modelHeader:string,modelText:string){
-    this.modelHeader=modelHeader;
-    this.modelText=modelText;
-    document.getElementById("btnLaunchModel")?.click();
-  }
-  ShowSpinner(){
-    this.showSpinner=true;
-  }
-  HideSpinner(){
-    this.showSpinner=false;
-  }
 
   registerUser() {
-    if(this.registerUserData.email==''|| this.registerUserData.password==''){
-      this.DisplayModalPopup("Error","Please enter the username and password");
-      return;
-    }
-    this.ShowSpinner();
     var userDataObject={
       email:this.registerUserData.email,
       password:this.registerUserData.password
     }
   
     this._auth.registerUser(userDataObject).subscribe(res => {
-      this.HideSpinner();localStorage.setItem('token', res.token);
-      this._router.navigate(['/login'])
+      localStorage.setItem('token', res.token);
+      this._router.navigate(['tweet'])
     },
       err => console.log(err));
   }
