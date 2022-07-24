@@ -10,3 +10,4 @@ export class Tweet{
     tweetDescription:any='';
     tweetImage:any='';
 }
+

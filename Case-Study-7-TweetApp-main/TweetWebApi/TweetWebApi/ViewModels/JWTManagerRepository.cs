@@ -29,6 +29,7 @@ namespace TweetWebApi.ViewModels
         }
         public Tokens Authenicate(LoginViewModel registerViewModel , bool IsRegister)
         {
+            //var _isAdmin = false;
             if (IsRegister)
             {
                 if (db.TblLogins.Any(x => x.Email == registerViewModel.Email))

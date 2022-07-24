@@ -14,6 +14,6 @@ namespace TweetWebApi.Models
         public string LoginId { get; set; }
         public string Password { get; set; }
         public string ConfirmPassword { get; set; }
-        public decimal? ContactNumber { get; set; }
+        public int? ContactNumber { get; set; }
     }
 }

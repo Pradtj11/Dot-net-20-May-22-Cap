@@ -1,1 +1,6 @@
-<p>search works!</p>
+<div>
+    <input #s type="text" placeholder="Search Tweets ☺ "
+     (keyup.enter)="search(s.value)"
+     [value]="tweet" />
+    <button (click)="search(s.value)">Search</button>
+  </div>

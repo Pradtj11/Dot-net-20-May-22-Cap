@@ -10,8 +10,11 @@ import { AccountService } from '../services/account.service';
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent implements OnInit {
-  
+  searchKey:string = "";
+  public searchTerm: string='';
+    
   clickEventSubscription:Subscription | undefined;
+  private _tweetservice: any;
   
 
   constructor(private auth: AuthService, private accountService:AccountService) { 
@@ -42,6 +45,11 @@ export class AccountComponent implements OnInit {
         this.i--;
         this.quantity=this.i;
       }
+    }
+    search(event:any){
+      this.searchTerm=(event.target as HTMLInputElement).value;
+      console.log(this.searchTerm);
+      this._tweetservice.search.next(this.searchTerm);
     }
   }
   

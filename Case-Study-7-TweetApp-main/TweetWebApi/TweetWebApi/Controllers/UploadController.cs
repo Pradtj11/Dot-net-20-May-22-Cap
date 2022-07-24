@@ -34,7 +34,7 @@ namespace TweetWebApi.Controllers
                     {
                         file.CopyTo(stream);
                     }
-                    string connectionString = "DefaultEndpointsProtocol=https;AccountName=emLHPBXxskXGWIHEdZVeemehyI0a8739bIRhk4L9DDLOMvjBhdficcP16NzgiWhQCA142uG3nLON+AStsfexfw==;EndpointSuffix=core.windows.net";
+                    string connectionString = "DefaultEndpointsProtocol=https;AccountName=tweetimage;AccountKey=emLHPBXxskXGWIHEdZVeemehyI0a8739bIRhk4L9DDLOMvjBhdficcP16NzgiWhQCA142uG3nLON+AStsfexfw==;EndpointSuffix=core.windows.net";
                     string containerName = "images";
                     BlobContainerClient container = new BlobContainerClient(connectionString, containerName);
                     var blob = container.GetBlobClient(fileName);
@@ -48,6 +48,7 @@ namespace TweetWebApi.Controllers
                     return BadRequest();
                 }
             }
+
             catch (Exception ex)
             {
                 return StatusCode(500);
