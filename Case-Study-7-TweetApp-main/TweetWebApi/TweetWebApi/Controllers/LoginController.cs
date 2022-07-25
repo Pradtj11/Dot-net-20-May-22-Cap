@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using TweetWebApi.Interfaces;
 using TweetWebApi.Models;
@@ -6,6 +7,7 @@ using TweetWebApi.ViewModels;
 
 namespace TweetWebApi.Controllers
 {
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class LoginController : Controller

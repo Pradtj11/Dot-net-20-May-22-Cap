@@ -4,7 +4,7 @@
 .layout
 {
     display: grid;
-    grid-template-columns: 275px auto 350px;
+    grid-template-columns: 250px 600px 150px;
     margin: 0 auto;
     
 }

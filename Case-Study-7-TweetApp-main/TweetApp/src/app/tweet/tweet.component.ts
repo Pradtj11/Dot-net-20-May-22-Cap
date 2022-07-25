@@ -42,13 +42,13 @@ export class TweetComponent implements OnInit {
 
     }
     if (this.isEdit) {
-      this.httpc.put("https://localhost:44343/api/Tweet", admindto).subscribe(res => this.PostSuccess(res), res => this.PostError(res));
+      this.httpc.put("https://tweetwebapi20220725114432.azurewebsites.net/api/Tweet", admindto).subscribe(res => this.PostSuccess(res), res => this.PostError(res));
     }
     else {
     let filetoUpload=<File>this.files[0];
     const formData=new FormData();
     formData.append('file',filetoUpload,filetoUpload.name)
-    this.httpc.post("https://localhost:44343/api/Upload",formData).subscribe(res=>{console.log(res); this.img=res;admindto.tweetImage=this.img.imageUrl;this.AddTweetData(admindto);},res=>console.log(res));
+    this.httpc.post("https://tweetwebapi20220725114432.azurewebsites.net/api/Upload",formData).subscribe(res=>{console.log(res); this.img=res;admindto.tweetImage=this.img.imageUrl;this.AddTweetData(admindto);},res=>console.log(res));
    
     }
 
@@ -56,7 +56,7 @@ export class TweetComponent implements OnInit {
 
   }
   AddTweetData(admindto:any){
-    this.httpc.post("https://localhost:44343/api/Tweet", admindto).subscribe(res => this.PostSuccess(res), res => this.PostError(res));
+    this.httpc.post("https://tweetwebapi20220725114432.azurewebsites.net/api/Tweet", admindto).subscribe(res => this.PostSuccess(res), res => this.PostError(res));
   }
   PostSuccess(res: any) {
     console.log(res);
@@ -70,7 +70,7 @@ export class TweetComponent implements OnInit {
   }
   getData(email: any) {
     console.log("Hi");
-    this.httpc.get("https://localhost:44343/api/Tweet/GetTweetsByUserName?username=" + email).subscribe(res => this.GetSuccess(res), res => this.GetError(res));
+    this.httpc.get("https://tweetwebapi20220725114432.azurewebsites.net/api/Tweet/GetTweetsByUserName?username=" + email).subscribe(res => this.GetSuccess(res), res => this.GetError(res));
   }
   GetSuccess(input: any) {
     this.users = (input);

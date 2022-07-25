@@ -9,9 +9,9 @@ export class AuthService {
   getusers() {
     throw new Error('Method not implemented.');
   }
-  private _registerUrl = "https://localhost:44343/api/Login/register";
-  private _loginUrl = "https://localhost:44343/api/Login/login";
-  private _UserUrl = "https://localhost:44343/api/Login/User";
+  private _registerUrl = "https://tweetwebapi20220725114432.azurewebsites.net/api/Login/register";
+  private _loginUrl = "https://tweetwebapi20220725114432.azurewebsites.net/api/Login/login";
+  private _UserUrl = "https://tweetwebapi20220725114432.azurewebsites.net/api/Login/User";
  
 
   constructor(private http: HttpClient, private _router:Router) { }

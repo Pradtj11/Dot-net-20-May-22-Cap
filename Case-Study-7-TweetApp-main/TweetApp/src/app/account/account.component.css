@@ -4,7 +4,7 @@
 .layout
 {
     display: grid;
-    grid-template-columns: 275px auto 350px;
+    grid-template-columns: 150px auto 350px;
     margin: 0 auto;
     
 }
@@ -18,8 +18,8 @@
 {
     /*height: 45px;
     filter: invert(46%) sepia(99%) saturate(1449%) hue-rotate(176deg) brightness(100%) contrast(91%);*/
-    padding: 10px;
-    margin-left: 60px;
+    padding: 8px;
+    margin-left: 5px;
 }
 .sidebar-menu
 {
@@ -31,8 +31,8 @@
     display: flex;
     align-items: center;
     font-weight: 700;
-    padding: 10px;
-    margin-left: 60px;
+    padding: 8px;
+    margin-left: 5px;
 }
 .sidebar-menu__item a{
     text-decoration: none;
@@ -52,9 +52,9 @@
     align-items: center;
     font-size: 19px;
     font-weight: 700;
-    padding: 10px;
+    padding: 8px;
     cursor: pointer;
-    margin-left: 60px;
+    
 }
 
 .sidebar-menu__item-icon
@@ -68,7 +68,7 @@
     filter: invert(67%) sepia(60%) saturate(4956%) hue-rotate(176deg) brightness(95%) contrast(91%);
 }
 .tweet__btn{
-    margin: 10px 80px;
+    margin: 10px 10px;
     border-radius: 50%;
     color: #1da0f2;
     width: 200px;
@@ -90,7 +90,7 @@
 }
 .block{
     height: 150px;
-    width: 300px;
+    width: 400px;
 }
 .block img{
     height: 150px;
